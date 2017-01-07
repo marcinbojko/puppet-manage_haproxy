@@ -1,0 +1,16 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "sh",
+    "isShellCommand": true,
+    "args": ["-c"],
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "echo running checks && puppet parser validate ${workspaceRoot}/manifests/*.pp && echo done",
+            "args":    ["echo running checks && puppet parser validate ${workspaceRoot}/manifests/*.pp && echo done"],
+            "isBuildCommand": true
+        }
+    ]
+}

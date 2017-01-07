@@ -1,83 +1,105 @@
 # manage_haproxy
 
-#### Table of Contents
+## Table of Contents
 
 1. [Description](#description)
-1. [Setup - The basics of getting started with manage_haproxy](#setup)
-    * [What manage_haproxy affects](#what-manage_haproxy-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with manage_haproxy](#beginning-with-manage_haproxy)
 1. [Usage - Configuration options and additional functionality](#usage)
-1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
+1. [Known Issues](#known-issues)
+1. [Author](#author)
 
 ## Description
 
-Start with a one- or two-sentence summary of what the module does and/or what
-problem it solves. This is your 30-second elevator pitch for your module.
-Consider including OS/Puppet version it works with.
+Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs/haproxy](https://forge.puppet.com/puppetlabs/haproxy)
 
-You can give more descriptive information in a second paragraph. This paragraph
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?" If your module has a range of functionality (installation, configuration,
-management, etc.), this is the time to mention it.
+## Changelog
 
-## Setup
+### Version 0.2.0 2017-01-08
 
-### What manage_haproxy affects **OPTIONAL**
+* added all public classes from `puppetlabs-haproxy`
 
-If it's obvious what your module touches, you can skip this section. For
-example, folks can probably figure out that your mysql_instance module affects
-their MySQL instances.
+### Version 0.1.0 Initial
 
-If there's more that they should know about, though, this is the place to mention:
+## Parameters
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
+### `listen`
 
-### Setup Requirements **OPTIONAL**
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxylisten](https://forge.puppet.com/puppetlabs/haproxy#define-haproxylisten)
 
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+### `frontend`
 
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you might want to include an additional "Upgrading" section
-here.
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxyfrontend](https://forge.puppet.com/puppetlabs/haproxy#define-haproxyfrontend)
 
-### Beginning with manage_haproxy
+### `backend`
 
-The very basic steps needed for a user to get the module up and running. This
-can include setup steps, if necessary, or it can be an example of the most
-basic use of the module.
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxybackend](https://forge.puppet.com/puppetlabs/haproxy#define-haproxybackend)
+
+### `balancermember`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxybalancermember](https://forge.puppet.com/puppetlabs/haproxy#define-haproxybalancermember)
+
+### `userlist`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxyuserlist](https://forge.puppet.com/puppetlabs/haproxy#define-haproxyuserlist)
+
+### `peers`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxypeers](https://forge.puppet.com/puppetlabs/haproxy#define-haproxypeers)
+
+### `peer`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxypeer](https://forge.puppet.com/puppetlabs/haproxy#define-haproxypeer)
+
+### `mailers`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxymailers](https://forge.puppet.com/puppetlabs/haproxy#define-haproxymailers)
+
+### `mailer`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxymailer](https://forge.puppet.com/puppetlabs/haproxy#define-haproxymailer)
+
+### `instance`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxyinstance](https://forge.puppet.com/puppetlabs/haproxy#define-haproxyinstance)
+
+### `instance_service`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxyinstance_service](https://forge.puppet.com/puppetlabs/haproxy#define-haproxyinstance_service)
+
+### `mapfile`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxymapfile](https://forge.puppet.com/puppetlabs/haproxy#define-haproxymapfile)
+
+### `defaults`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxydefaults](https://forge.puppet.com/puppetlabs/haproxy#define-haproxydefaults)
 
 ## Usage
 
-This section is where you describe how to customize, configure, and do the
-fancy stuff with your module here. It's especially helpful if you include usage
-examples and code samples for doing things with your module.
+```yaml
+listen:
+frontend:
+backend:
+balancermember:
+userlist:
+peers:
+peer:
+mailers:
+mailer:
+instance:
+instance_service:
+mapfile:
+defaults:
+```
 
-## Reference
+## Known Issues
 
-Here, include a complete list of your module's classes, types, providers,
-facts, along with the parameters for each. Users refer to this section (thus
-the name "Reference") to find specific details; most users don't read it per
-se.
+Remember to set `net.ipv4.ip_nonlocal_bind=1`
 
-## Limitations
+## Author
 
-This is where you list OS compatibility, version compatibility, etc. If there
-are Known Issues, you might want to include them under their own heading here.
+Marcin Bojko (marcinbojko.pl@gmail.com)
 
-## Development
+[https://marcinbojko.wordpress.com/](https://marcinbojko.wordpress.com/)
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+[https://github.com/marcinbojko](https://github.com/marcinbojko)
 
-## Release Notes/Contributors/Etc. **Optional**
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You can also add any additional sections you feel
-are necessary or important to include here. Please use the `## ` header.
