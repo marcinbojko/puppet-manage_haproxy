@@ -13,7 +13,12 @@ Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs
 
 ## Changelog
 
-### Version 0.3.0 2018-10-22
+### Version 0.3.1 2018-10-21
+
+* fixed wrong date in README.md
+* gitignore working now
+
+### Version 0.3.0 2018-10-21
 
 * converted to PDK version 1.7.1
 * added files for Travis CI
