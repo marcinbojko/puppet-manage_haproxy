@@ -13,6 +13,12 @@ Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs
 
 ## Changelog
 
+### Version 0.3.0 2018-10-22
+
+* converted to PDK version 1.7.1
+* added files for Travis CI
+* converted to puppet 5 syntax
+
 ### Version 0.2.0 2017-01-08
 
 * added all public classes from `puppetlabs-haproxy`
@@ -102,4 +108,3 @@ Marcin Bojko (marcinbojko.pl@gmail.com)
 [https://marcinbojko.wordpress.com/](https://marcinbojko.wordpress.com/)
 
 [https://github.com/marcinbojko](https://github.com/marcinbojko)
-

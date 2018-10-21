@@ -1,0 +1,9 @@
+.*/
+.*
+*.md
+spec*
+tasks*
+appveyor.yml
+Gemfile*
+Rakefile*
+bin
