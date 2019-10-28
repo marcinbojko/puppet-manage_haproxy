@@ -13,6 +13,11 @@ Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs
 
 ## Changelog
 
+### Version 0.4.0 2019-10-28
+
+* converted to pdk 1.14
+* added `haproxy::resolver`
+
 ### Version 0.3.1 2018-10-21
 
 * fixed wrong date in README.md
@@ -84,6 +89,10 @@ Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs
 
 #### [https://forge.puppet.com/puppetlabs/haproxy#define-haproxydefaults](https://forge.puppet.com/puppetlabs/haproxy#define-haproxydefaults)
 
+### `resolver`
+
+#### [https://forge.puppet.com/puppetlabs/haproxy#set-up-a-resolver](https://forge.puppet.com/puppetlabs/haproxy#set-up-a-resolver)
+
 ## Usage
 
 ```yaml
@@ -100,6 +109,7 @@ instance:
 instance_service:
 mapfile:
 defaults:
+resolver:
 ```
 
 ## Known Issues

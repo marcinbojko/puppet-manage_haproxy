@@ -16,12 +16,12 @@ class manage_haproxy (
     Data  $instance_service = $manage_haproxy::params::instance_service,
     Data  $mapfile          = $manage_haproxy::params::mapfile,
     Data  $defaults         = $manage_haproxy::params::default,
+    Data  $resolver         = $manage_haproxy::params::resolver,
 )
 {
   if !empty ($listen) {
       create_resources ('haproxy::listen',$listen)
   }
-
   if !empty ($frontend) {
       create_resources ('haproxy::frontend',$frontend)
   }
@@ -57,5 +57,8 @@ class manage_haproxy (
   }
   if !empty ($defaults) {
       create_resources ('haproxy::defaults',$defaults)
+  }
+  if !empty ($resolver) {
+      create_resources ('haproxy::resolver',$resolver)
   }
 }

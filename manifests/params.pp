@@ -14,4 +14,5 @@ class manage_haproxy::params {
   $instance_service = undef
   $mapfile          = undef
   $defaults         = undef
+  $resolver         = undef
 }
