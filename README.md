@@ -13,6 +13,11 @@ Aggregator/wrapper for `puppetlabs-haproxy` [https://forge.puppet.com/puppetlabs
 
 ## Changelog
 
+### Version 0.5.0 2021-05-02
+
+* converted to pdk 2.1.0
+* added constrains for max version being puppet 5 (for now)
+
 ### Version 0.4.0 2019-10-28
 
 * converted to pdk 1.14
@@ -118,8 +123,6 @@ Remember to set `net.ipv4.ip_nonlocal_bind=1`
 
 ## Author
 
-Marcin Bojko (marcinbojko.pl@gmail.com)
+Marcin Bojko (marcin@bojko.com.pl)
 
-[https://marcinbojko.wordpress.com/](https://marcinbojko.wordpress.com/)
-
-[https://github.com/marcinbojko](https://github.com/marcinbojko)
+[https://marcinbojko.wordpress.com/](https://bojko.dev/)
